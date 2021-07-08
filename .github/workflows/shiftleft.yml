@@ -44,7 +44,7 @@ jobs:
           CHKP_CLOUDGUARD_SECRET: ${{ secrets.CHKP_CLOUDGUARD_SECRET }}
         run: |
           git clone https://github.com/tazboland/demo-app
-          docker build -t rolandopcp/myapp ./demo-app
+          docker build -t tazboland/myapp ./demo-app
           docker save -o myapp.tar tazboland/myapp
           chmod +x ./shiftleft
           ./shiftleft image-scan -i myapp.tar
